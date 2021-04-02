@@ -1,0 +1,189 @@
+.game {
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    position: relative;
+
+    .statistic {
+        width: 100%;
+        margin-bottom: 10px;
+
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > span {
+                display: block;
+                color: #fafafa;
+                font-size: 20px;
+    
+                &.line {
+                    margin: 0 20px;
+                }
+            }
+        }
+
+        button {
+            margin-left: 10px;
+            font-size: 20px;
+            transition: ease .3s;
+            background-color: transparent;
+            color: #fafafa;
+            border: none;
+            outline: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: rgba($color: #40e0d0, $alpha: .6);
+            }
+
+            i {
+                transition: ease .3s;
+
+                &.rotate {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        .statistics {
+            position: absolute;
+            top: 60px;
+            margin: 0;
+            width: 100%;
+            z-index: 5000;
+            transform: scale(0);
+            transform-origin: top center;
+            transition: ease .3s;
+            background: rgba($color: #1d1d88, $alpha: .9);
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+
+            &.active {
+                transform: scale(1);
+            }
+
+            > div {
+                color: #fafafa;
+                font-size: 20px;
+                width: 50%;
+                align-items: center;
+
+                ul {
+                    margin: 0;
+                }
+
+                span {
+                    display: block;
+
+                    &.right {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+
+    .field {
+        display: grid;
+        grid-template: repeat(5, 64px) / repeat(5, 64px);
+        margin: 0;
+
+        li {
+            text-transform: uppercase;
+            font-size: 40px;
+            display: grid;
+            place-items: center;
+            color: #fafafa;
+            text-shadow: 3px 3px 4px #000, 0 0 30px #eeff00;
+            border: 1px solid #fafafa;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover, &.active {
+                background-color: rgba($color: #9c9a9a, $alpha: .6);
+            }
+
+            &.not-hover:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .check {
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        margin: 10px 0;
+
+        span {
+            margin-bottom: 5px;
+            color: #fafafa;
+            font-size: 18px;
+
+            &.uppercase {
+                text-transform: uppercase;
+            }
+
+            .reset {
+                margin-left: 10px;
+                font-size: 20px;
+                transition: ease .3s;
+                background-color: transparent;
+                color: #fafafa;
+                border: none;
+                outline: none;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+
+                &:hover {
+                    background-color: rgba($color: #40e0d0, $alpha: .6);
+                }
+            }
+        }
+
+        > button {
+            outline: none;
+
+            &.disabled {
+                cursor: not-allowed;
+                pointer-events: none;
+                background-color: #808080;
+            }
+        }
+    }
+
+    .letters {
+        display: flex;
+        flex-wrap: wrap;
+        width: 320px;
+        justify-content: center;
+        margin: 0;
+
+        li {
+            display: grid;
+            place-items: center;
+            width: 50px;
+            height: 50px;
+            color: #fafafa;
+            border: 1px solid #fafafa;
+            cursor: pointer;
+            transition: ease .3s;
+
+            &:hover, &.active {
+                background-color: rgba($color: #9c9a9a, $alpha: .6);
+            }
+        }
+    }
+}

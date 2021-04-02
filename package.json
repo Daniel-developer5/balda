@@ -1,0 +1,11 @@
+{
+  "name": "balda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Mudrak <daniel.mudrak2005@gmail.com>",
+  "license": "ISC"
+}

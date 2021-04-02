@@ -1,0 +1,48 @@
+.user-list {
+    margin-top: 50px;
+    align-self: normal;
+
+    h2 {
+        margin-bottom: 20px;
+        color: #fafafa;
+    }
+
+    .empty {
+        color: #fafafa;
+        font-size: 20px;
+    }
+
+    ul {
+        li {
+            padding: 20px;
+            background: rgba($color: #1d1d88, $alpha: .8);
+            color: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 5px;
+            margin: 10px 0;
+
+            > div {
+                display: flex;
+                font-size: 20px;
+
+                .name {
+                    margin-left: 20px;
+                }
+            }
+
+            button {
+                outline: none;
+
+                i {
+                    margin-right: 10px;
+                }
+
+                .waiting-loader {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}

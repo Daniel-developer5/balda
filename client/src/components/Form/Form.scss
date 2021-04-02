@@ -1,0 +1,58 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 40px;
+    background-color: #fafafa;
+    border-radius: 5px;
+
+
+    .field-box {
+        display: flex;
+        flex-direction: column;
+
+        > div {
+            height: 50px;
+
+            &:last-child {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .checkbox {
+        display: flex;
+        margin: 60px 0 30px 0;
+    }
+
+    button {
+        outline: none;
+        height: 50px;
+        position: relative;
+
+        &.disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                background-color: rgba($color: #5deee2, $alpha: .2);
+            }
+        }
+    }
+
+    .question {
+        margin-top: 20px;
+
+        a {
+            margin-left: 5px;
+            transition: ease .3s;
+        }
+    }
+}
